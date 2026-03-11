@@ -1,64 +1,68 @@
 import React from 'react'
 
 import {
-  Github,
-  Linkedin,
-  Mail,
-  Moon,
-  Sun,
-  Send,
-  Download,
-  ExternalLink,
-  Menu,
-  X,
-  Code2,
-  Sparkles,
-  GraduationCap,
-  Calendar,
-  Award,
-  ArrowLeft,
-  Phone,
-  MessageCircle,
-  Zap,
-  Rocket,
-  Target,
-  TrendingUp,
-  Box,
-  Database,
-  Globe,
-  Layers,
-  Twitter,
-  Facebook,
-  Laptop,
+    Github,
+    ExternalLink,
+    ArrowLeft,
 } from "lucide-react"
 
 import { motion, useInView, useScroll, useSpring, AnimatePresence } from "framer-motion"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { useState, useEffect, useRef } from "react"
+import { useRef } from "react"
 
 
 function AnimatedSection({ children, className = "", delay = 0 }) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
-  
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  )
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true, margin: "-100px" })
+
+    return (
+        <motion.div
+            ref={ref}
+            initial={{ opacity: 0, y: 50 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
+            className={className}
+        >
+            {children}
+        </motion.div>
+    )
 }
 
 
 const ProjectSection = ({ selectedProject, setSelectedProject }) => {
 
     const projects = [
+        {
+            title: "TrustCare – Baby Sitting & Elderly Care Service Platform",
+            description: "A comprehensive care service platform for booking trusted babysitters, elderly care, and special home care with dynamic booking, location selection, and real-time cost calculation.",
+            fullDescription:
+                "TrustCare is a full-featured web application that connects families with trusted caregivers for children, elderly, and sick individuals. Users can browse care services, view detailed service pages, and book sessions by selecting duration and location (Division, District, City, Area). The platform features dynamic total cost calculation, booking status tracking (Pending / Confirmed / Completed / Cancelled), a My Bookings dashboard, email invoice on booking, and optional Stripe payment integration. Built with Next.js and Firebase for a fast, secure, and accessible experience across all devices.",
+            tech: ["Next.js", "MongoDB", "Firebase Auth", "Stripe", "Tailwind CSS"],
+            mainTech: "Next.js 16, React 19, NextAuth, MongoDB, Stripe, React Hook Form, React Toastify, React Responsive Carousel",
+            image: "https://i.ibb.co.com/tMbdQN5x/image.png",
+            liveUrl: "https://trust-care-pi.vercel.app/",
+            githubUrl: "https://github.com/Sultanmia22/TrustCare.git",
+            challenges: [
+                "Implementing protected private routes with proper redirect logic after login/registration to return users to their intended booking page",
+                "Managing NextAuth session persistence across page reloads without errors in a Next.js SPA environment",
+                "Building a dynamic booking flow with cascading location selectors (Division → District → City → Area) using controlled form state",
+                "Calculating and displaying total cost in real-time based on selected duration × service charge per unit",
+                "Integrating Stripe payment gateway and creating bookings only after successful payment confirmation",
+                "Sending automated email invoices to users upon booking confirmation using a backend email service",
+                "Validating registration form with React Hook Form including NID, password strength (6+ chars, uppercase, lowercase), and duplicate email checks",
+            ],
+            futurePlans: [
+                "Build a full Admin Dashboard with payment histories, booking management, and caretaker verification",
+                "Add real-time chat/messaging between caregivers and families for session coordination",
+                "Implement a review and rating system with detailed feedback after each completed care session",
+                "Add calendar integration for caregiver availability management and appointment scheduling",
+                "Create a caregiver profile page with certifications, experience, and background check badge",
+                "Implement push notifications for booking confirmations, status updates, and session reminders",
+                "Add advanced filtering by service type, location proximity, price range, and caregiver rating",
+            ],
+        },
+        
         {
             title: "ContestHub",
             description: "Complete contest management platform with creator tools, payment integration, and role-based dashboards",
@@ -127,34 +131,7 @@ const ProjectSection = ({ selectedProject, setSelectedProject }) => {
                 "Add comment/messaging system between artists and buyers",
             ],
         },
-        {
-            title: "SkillSwap – A Local Skill Exchange Platform",
-            description: "An interactive platform for individuals to offer, learn, and trade skills within their local area with ratings and real-time booking",
-            fullDescription:
-                "SkillSwap is a comprehensive skill exchange platform that connects local skill providers and learners. Users can browse skill listings across multiple categories like music, language, coding, and wellness, view provider ratings and availability, book sessions through an intuitive interface, and manage their profiles. The platform features real-time slot availability, user authentication with Google login, profile management with image updates, password reset functionality, and a responsive design optimized for all devices.",
-            tech: ["React", "Firebase Authentication", "JSON Data", "Tailwind CSS"],
-            mainTech: "React, Firebase (Auth), Swiper.js, AOS, React Hot Toast, Tailwind CSS",
-            image: "https://i.ibb.co.com/8L92XzCL/Screenshot-2026-01-05-164718.png",
-            liveUrl: "https://skillswap-apps.netlify.app/",
-            githubUrl: "https://github.com/Sultanmia22/Skillswap.git",
-            challenges: [
-                "Implementing protected routes with proper redirect logic after authentication to return users to their intended page",
-                "Managing Firebase authentication state persistence across page reloads without errors in SPA",
-                "Building a functional forgot password feature with email verification and Gmail redirect",
-                "Creating a profile update form using Firebase updateProfile() method with image URL handling",
-                "Implementing password toggle eye button with validation for uppercase, lowercase, and minimum 6 characters",
-                "Integrating multiple npm packages (AOS, Swiper, React Hot Toast) seamlessly without conflicts",
-            ],
-            futurePlans: [
-                "Add payment gateway integration for skill session booking and transactions",
-                "Implement real-time chat/messaging system between skill providers and learners",
-                "Create a review and rating system with detailed feedback for skill sessions",
-                "Add calendar integration for appointment scheduling and availability management",
-                "Build a skill provider dashboard with earnings, session management, and analytics",
-                "Implement advanced filtering by category, price range, rating, and location proximity",
-                "Add notification system for booking confirmations and session reminders",
-            ],
-        }
+
     ]
 
     return (

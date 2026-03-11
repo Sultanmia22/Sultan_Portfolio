@@ -211,7 +211,7 @@ const Hero = () => {
                                         <img
                                             src={heroImage}
                                             alt="Alex Johnson - MERN Stack Developer"
-                                            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                           className="w-full h-full object-cover object-[center_28%] transform group-hover:scale-105 transition-transform duration-700"
                                         />
 
                                         {/* Gradient Overlay */}
