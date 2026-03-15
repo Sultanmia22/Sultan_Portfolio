@@ -141,10 +141,9 @@ const Hero = () => {
                                     Sultan Mia
                                 </span>
                             </motion.h1>
-                            <motion.p variants={fadeInUp} className="text-2xl md:text-3xl font-semibold text-muted-foreground">MERN Stack Developer</motion.p>
+                            <motion.p variants={fadeInUp} className="text-2xl md:text-3xl font-semibold text-muted-foreground">MERN Stack Developer | Frontend Developer</motion.p>
                             <motion.p variants={fadeInUp} className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed text-pretty">
-                                Building scalable full-stack web applications with modern technologies. Passionate about creating
-                                elegant solutions to complex problems.
+                                I am a Full-Stack Developer with a deep-rooted passion for the Frontend. I specialize in building scalable, high-performance web applications using the MERN Stack (MongoDB, Express, React, Node). My core strength lies in turning complex requirements into seamless, pixel-perfect user experiences using Next.js, TypeScript, and Tailwind CSS. I don't just write code; I craft digital interfaces that are fast, accessible, and user-centric.
                             </motion.p>
                         </div>
 
@@ -249,7 +248,7 @@ const Hero = () => {
                                         <span className="text-chart-5">"Sultan Mia"</span>,
                                         <br />
                                         <span className="text-muted-foreground ml-4">role: </span>
-                                        <span className="text-chart-5">"MERN Stack Developer"</span>,
+                                        <span className="text-chart-5">"MERN Stack Developer | Frontend Developer"</span>,
                                         <br />
                                         <span className="text-muted-foreground ml-4">status: </span>
                                         <span className="text-green-500">"available"</span>
