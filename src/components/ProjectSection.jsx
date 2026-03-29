@@ -41,7 +41,7 @@ const ProjectSection = ({ selectedProject, setSelectedProject }) => {
             tech: ["Next.js", "MongoDB", "Firebase Auth", "Stripe", "Tailwind CSS"],
             mainTech: "Next.js 16, React 19, NextAuth, MongoDB, Stripe, React Hook Form, React Toastify, React Responsive Carousel",
             image: "https://i.ibb.co.com/tMbdQN5x/image.png",
-            liveUrl: "https://trust-care-pi.vercel.app/",
+            liveUrl: "https://trust-care-pink.vercel.app/",
             githubUrl: "https://github.com/Sultanmia22/TrustCare.git",
             challenges: [
                 "Implementing protected private routes with proper redirect logic after login/registration to return users to their intended booking page",
