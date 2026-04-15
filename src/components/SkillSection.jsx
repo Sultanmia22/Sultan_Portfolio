@@ -1,34 +1,17 @@
 import React from 'react'
 import {
   Github,
-  Linkedin,
-  Mail,
-  Moon,
-  Sun,
-  Send,
-  Download,
-  ExternalLink,
-  Menu,
-  X,
+  Leaf,
   Code2,
   Sparkles,
-  GraduationCap,
-  Calendar,
-  Award,
-  ArrowLeft,
-  Phone,
-  MessageCircle,
   Zap,
   Rocket,
   Target,
-  TrendingUp,
   Box,
   Database,
   Globe,
   Layers,
-  Twitter,
-  Facebook,
-  Laptop,
+ 
 } from "lucide-react"
 
 import { motion, useInView, useScroll, useSpring, AnimatePresence } from "framer-motion"
@@ -70,7 +53,10 @@ const SkillSection = () => {
       { name: "Node.js", icon: Code2, level: 83 },
       { name: "Express.js", icon: Rocket, level: 85 },
     ],
-    database: [{ name: "MongoDB", icon: Database, level: 80 }],
+    database: [
+      { name: "MongoDB", icon: Leaf, level: 60 },
+      { name: "Mongose ODB", icon: Leaf, level: 50 }
+    ],
     tools: [
       { name: "Git", icon: Code2, level: 88 },
       { name: "GitHub", icon: Github, level: 90 },

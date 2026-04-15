@@ -342,7 +342,6 @@ export default function Portfolio() {
             <div className="max-w-7xl mx-auto text-center">
               <p className="text-muted-foreground">
                 &copy; 2026 MD Sultan Mia. All rights reserved. <br />
-                Built with React & Tailwind CSS.
               </p>
             </div>
           </motion.footer>
