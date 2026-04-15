@@ -75,8 +75,8 @@ const Education = () => {
         {
             degree: "Complete Web Development Course",
             institution: "Programming Hero",
-            period: "Jul 2025 – Present",
-            status: "Ongoing",
+            period: "Jul 2025 – Jan 2026",
+            status: "Completed",
             description: "Currently learning web development through Programming Hero, covering HTML, CSS, Tailwind CSS, JavaScript, React, Node.js, Express.js, and MongoDB. Gaining hands-on experience by building projects and applying industry best practices.",
             achievements: [
                 "Building full-stack projects",
