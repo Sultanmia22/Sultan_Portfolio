@@ -33,7 +33,6 @@ function AnimatedSection({ children, className = "", delay = 0 }) {
   )
 }
 
-// --- Main ContactSection Component ---
 const ContactSection = () => {
 
   const {
@@ -58,7 +57,6 @@ const ContactSection = () => {
     }
 
     try {
-      // EmailJS দিয়ে মেইল পাঠানো হচ্ছে
       const res = await emailjs.send(serviceId, templeteId, templateParams, publicKey);
 
       console.log('Email sent successfully!', res.text);
@@ -66,11 +64,10 @@ const ContactSection = () => {
 
       reset();
 
-      // অপশনাল: ইউজারকে একটি সফল মেসেজ দেখাতে পারেন
+    
       alert("Message sent successfully!");
 
     } catch (error) {
-      // যদি কোনো এরর হয়
       console.error('Failed to send email:', error);
       alert("Failed to send message. Please try again.");
     }
@@ -105,7 +102,7 @@ const ContactSection = () => {
                     <div>
                       <div className="text-sm text-muted-foreground">Email</div>
                       <a href="mailto:sultanmia5732@gmail.com" className="font-semibold hover:text-primary transition-colors">
-                        sultanmia5732@gmail.com
+                        sultanmia2257@gmail.com
                       </a>
                     </div>
                   </div>
@@ -121,7 +118,7 @@ const ContactSection = () => {
                     <div>
                       <div className="text-sm text-muted-foreground">Phone</div>
                       <a href="tel:+8801746931945" className="font-semibold hover:text-primary transition-colors">
-                        +8801746931945
+                        +880 1746931945
                       </a>
                     </div>
                   </div>

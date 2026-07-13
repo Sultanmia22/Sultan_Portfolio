@@ -34,6 +34,32 @@ const ProjectSection = ({ selectedProject, setSelectedProject }) => {
 
     const projects = [
         {
+            title: "TechEasy – A Full-Stack E-Commerce Platform",
+            description: "A modern e-commerce platform for buying and selling tech products in Bangladesh with Stripe payments and role-based dashboards",
+            fullDescription:
+                "TechEasy is a comprehensive full-stack e-commerce application built with a Next.js frontend and an Express + MongoDB REST API backend. It delivers a complete online shopping experience — from product discovery, cart management, and category filtering to secure Stripe payments and role-based admin dashboards. The platform features dual authentication (email/password and Google OAuth via NextAuth), Bangladesh-focused checkout with district-based delivery charges (Dhaka: ৳80, outside: ৳120), real-time admin analytics via MongoDB aggregation, customer order tracking with PDF receipt download, wishlist management, profile & address book, and a fully responsive dark/light themed UI built with Tailwind CSS and DaisyUI.",
+            tech: ["Next.js", "React", "Express.js", "MongoDB", "TypeScript", "Stripe"],
+            mainTech: "Next.js 16, React 19, TypeScript, Express.js 5, MongoDB, Mongoose 9, Tailwind CSS 4, DaisyUI 5, NextAuth.js 4, Stripe, TanStack React Query 5",
+            image: "https://i.ibb.co.com/bjFSm7Xv/Techeasy-home-page-photo.png", 
+            liveUrl: "https://techeasy-client.vercel.app/",
+            githubUrl: "https://github.com/Sultanmia22/TechEasy-Client.git", // TODO: Update with actual repo URL
+            challenges: [
+                "Implementing dual authentication system with NextAuth.js (Credentials + Google OAuth) and syncing tokens with a separate Express backend via JWT",
+                "Building Bangladesh-specific checkout flow with district-based dynamic delivery charges (Dhaka vs. outside) and BDT currency Stripe integration",
+                "Creating role-based dashboards with separate admin and customer views powered by MongoDB aggregation pipelines for real-time analytics",
+                "Managing protected routes and auto sign-out on 401/403 responses across Next.js client and Express API with consistent JWT validation",
+                "Integrating multiple data-fetching strategies (TanStack React Query, Axios, SWR) and external services (Stripe, ImgBB, EmailJS) in a unified architecture",
+            ],
+            futurePlans: [
+                "Add product review and rating system with verified purchase badges",
+                "Implement advanced search with filters by brand, price range, and specifications",
+                "Create coupon/discount system with admin-managed promo codes",
+                "Add real-time order tracking with delivery partner API integration",
+                "Build a seller/vendor registration system for multi-vendor marketplace support",
+                "Integrate analytics dashboard with sales trends, user demographics, and revenue charts",
+            ],
+        },
+        {
             title: "TrustCare – Baby Sitting & Elderly Care Service Platform",
             description: "A comprehensive care service platform for booking trusted babysitters, elderly care, and special home care with dynamic booking, location selection, and real-time cost calculation.",
             fullDescription:
@@ -62,7 +88,7 @@ const ProjectSection = ({ selectedProject, setSelectedProject }) => {
                 "Add advanced filtering by service type, location proximity, price range, and caregiver rating",
             ],
         },
-        
+
         {
             title: "ContestHub",
             description: "Complete contest management platform with creator tools, payment integration, and role-based dashboards",
@@ -104,34 +130,6 @@ const ProjectSection = ({ selectedProject, setSelectedProject }) => {
                 "Implement dispute resolution system for contest-related issues"
             ],
         },
-
-        {
-            title: "ARTIFY – A Creative Artwork Showcase Platform",
-            description: "An online art-sharing platform where artists can upload, display, and explore creative works with community interaction",
-            fullDescription:
-                "ARTIFY is a comprehensive art-sharing platform designed for artists and art enthusiasts to connect and collaborate. Artists can upload their creative works with detailed information, explore other artists' galleries, curate their favorite artworks, and interact through likes and comments. The platform features a modern UI with intuitive navigation, real-time updates, a like system with MongoDB, category filtering, dark/light mode toggle, and responsive design across all devices.",
-            tech: ["React", "Express.js", "MongoDB", "Tailwind CSS"],
-            mainTech: "React, Express.js, MongoDB, Firebase Authentication, Tailwind CSS",
-            image: "https://i.ibb.co.com/qL2HkXzG/Screenshot-2026-01-05-164055.png",
-            liveUrl: "https://artify-d6b69.web.app/",
-            githubUrl: "https://github.com/Sultanmia22/future-box-client.git",
-            challenges: [
-                "Implementing MongoDB $inc/$push/$pull operators for the like system with increase and decrease functionality",
-                "Creating a real-time filter system for artworks by category without page reload",
-                "Managing user authentication state across private routes to prevent unwanted redirects on page reload",
-                "Integrating multiple libraries (react-image-gallery, React Simple Typewriter, React Awesome Reveal, React Tooltip) seamlessly",
-                "Implementing dark/light mode toggle with localStorage persistence across all components",
-            ],
-            futurePlans: [
-                "Add Artist Profile Page showing artist bio, total artworks, and follower count",
-                "Implement Category Filter Page with tabbed view for grouped artworks",
-                "Add advanced search with filters by medium, price range, and dimensions",
-                "Create notification system for likes, favorites, and new artist follows",
-                "Integrate payment gateway for artwork purchases",
-                "Add comment/messaging system between artists and buyers",
-            ],
-        },
-
     ]
 
     return (
